@@ -1,2 +1,2 @@
 # PII Parsing Tools
-Includes tools for research paper.
+Includes Text Parser and Accuracy Assesssment source files.
