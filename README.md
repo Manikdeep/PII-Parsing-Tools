@@ -1,2 +1,2 @@
 # PII Parsing Tools
-This repository includes Text Parser and Accuracy Assesssment source files.
+This repository includes source files for PII (Personally Identifiable Information) Text Parser and Accuracy Assesssment.
