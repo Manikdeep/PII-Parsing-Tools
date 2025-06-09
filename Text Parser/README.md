@@ -27,12 +27,13 @@ export AWS_DEFAULT_REGION="us-east-1"
 		"apikey": "YOUR_API_KEY"
 
 File Structure Requirements
-	- Place your Telegram result.json files in a folder of your choice.
-	- Update this line in the script with the full path to that folder:
-Main_Folder = 'PATH'
-Each processed .json file will generate a corresponding .xlsx file.
-	- Supported file structure:
-    	Telegram result.json format (from the export chat function)
+- Place your Telegram result.json files in a folder of your choice.
+- Update this line in the script with the full path to that folder:
+	Main_Folder = 'PATH'
+- Each processed .json file will generate a corresponding .xlsx file.
+
+Supported file structure:
+- Telegram result.json format (from the export chat function)
 
 Notes:
 - Currently supports only Telegram .json exports.
