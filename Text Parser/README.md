@@ -2,11 +2,11 @@ This tool parses Telegram-exported result.json chat logs, detects English entiti
 
 Setup Guide
 1. Set up a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate   #Use ‘venv\Scripts\activate’ on Windows
+- python -m venv venv
+- source venv/bin/activate   #Use ‘venv\Scripts\activate’ on Windows
 2. Install required packages
-Run this command in your terminal:
-pip install boto3 requests openpyxl pandas tqdm ftfy python-dateutil langdetect
+- Run this command in your terminal:
+	- pip install boto3 requests openpyxl pandas tqdm ftfy python-dateutil langdetect
 
 API Requirements
 1.	Amazon Comprehend
