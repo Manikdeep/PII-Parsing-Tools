@@ -82,10 +82,10 @@ This tool (PII_TextParser.py) parses Telegram-exported result.json chat logs, de
 
 ### Post Parsing Workflow
 
-Once the parser is done and you've got a bunch of Excel files with categorized data, here's what to do next. These steps clean up the info even more so you only keep the good stuff:
+Once parsing of PII is complete and you have obtained a set of Excel files containing categorized data, follow these steps to further clean and refine the information to retain only the most relevant content:
 
 1. Excel File Merger\
-   This script combines all your Excel files into one big file.
+   This script combines all your Excel files into one large file.
    
    Requirements:
    - A folder with all the Excel files you want to merge (they should end in .xlsx).
@@ -98,7 +98,7 @@ Once the parser is done and you've got a bunch of Excel files with categorized d
    
    Use:
    - It reads every Excel file in that folder.
-   - It stacks all the data together into one big Excel file.
+   - It stacks all the data together into one large Excel file.
    - It saves that file as a single .xlsx file in the same location.
 
 3. Extract Addresses\
