@@ -2,7 +2,7 @@ This tool parses Telegram-exported result.json chat logs, detects English entiti
 
 ### Setup Guide
 
-1. Download Python and add Python to PATH.
+1. Download Python and add Python to PATH variables.
 
 2. Create your project folder which includes scraped .JSON files and the parser script.
 	Example folder structure:
