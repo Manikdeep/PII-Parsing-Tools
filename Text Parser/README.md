@@ -1,4 +1,6 @@
-This tool parses Telegram-exported result.json chat logs, detects English entities using Amazon Comprehend, and enriches credit card data using the BINChecker API. Results are saved in .xlsx files.
+### PII Text Parsing
+
+This tool (PII_TextParser.py) parses Telegram-exported result.json chat logs, detects English entities using Amazon Comprehend, and enriches credit card data using the BINChecker API. Results are saved in .xlsx files.
 
 ### Setup Guide
 
@@ -75,3 +77,5 @@ This tool parses Telegram-exported result.json chat logs, detects English entiti
 	- comprehend.detect_entities: finds general things like names and orgs
 	- comprehend.detect_pii_entities: finds private stuff like SSNs, phone numbers
 	- semaphore: controls how many things run at once (helps your CPU breathe)
+
+### Post Parsing Workflow
