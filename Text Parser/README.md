@@ -78,4 +78,67 @@ This tool (PII_TextParser.py) parses Telegram-exported result.json chat logs, de
 	- comprehend.detect_pii_entities: finds private stuff like SSNs, phone numbers
 	- semaphore: controls how many things run at once (helps your CPU breathe)
 
+---
+
 ### Post Parsing Workflow
+
+Once the parser is done and you've got a bunch of Excel files with categorized data, here's what to do next. These steps clean up the info even more so you only keep the good stuff:
+
+1. Excel File Merger\
+   This script combines all your Excel files into one big file.
+   
+   Requirements:
+   - A folder with all the Excel files you want to merge (they should end in .xlsx).
+   - Update the path in the script so it knows where your folder is.
+     
+   To run:
+   - Open Excel_File_Merger.py.
+   - Make sure the folder path is correct.
+   - Run the script.
+   
+   Use:
+   - It reads every Excel file in that folder.
+   - It stacks all the data together into one big Excel file.
+   - It saves that file as a single .xlsx file in the same location.
+
+3. Extract Addresses\
+   This script pulls out only the non-empty rows of the "Address" column.
+
+   To run:
+   - Open Extract_Addresses.py.
+   - Make sure the input_file path points to the file you got from the merger step.
+   - Run the script.
+   
+   Use:
+   - Checks each row to see if there's an address.
+   - If there is, it keeps the row.
+   - If there's no address, it gets rid of it.
+   - Saves the cleaned-up file with a new name.
+
+5. Geocoding API\
+   This API looks up the address online to fill in missing or incorrect details like ZIP Code or State.
+
+   To run:
+   - Open GeocodingAPI.py.
+   - Change the file path so it points to the filtered address file from the last step.
+   - Run the script (requires Internet).
+   
+   Use:
+   - Sends each address to Google's Geocoding API.
+   - Gets back a clean, full address.
+   - Adds ZIP codes and states into new columns.
+   - Saves the new version of the file.
+
+7. Extract ZIP Codes\
+   This script keeps only the rows that have valid ZIP codes.
+
+   To run:
+   - Open Extract_ZIP_Codes.py.
+   - Make sure the path points to the file from the geocode step.
+   - Run the script.
+   
+   Use:
+   - Looks at the ZIP column.
+   - Keeps rows that have ZIP codes.
+   - Deletes rows that don’t.
+   - Saves the final cleaned file.
