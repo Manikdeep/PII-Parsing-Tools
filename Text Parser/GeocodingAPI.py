@@ -24,7 +24,7 @@ def get_address_details(address, api_key):
 # Load the Excel file
 input_file = "PATH/Excel Results/ExcelFile<MONTH>/<MONTH>.xlsx"  # Replace with your file path
 output_file = "PATH/Excel Results/ExcelFile<MONTH>/<MONTH>GeocodedAddresses.xlsx"  # Output file
-api_key = "AIzaSyBUBSMYCsBXvLq6yVarzxo6rKtAPiiZY2Y"  # Replace with your actual API key
+api_key = "YOUR API KEY"  # Replace with your actual API key
 
 # Read the input file
 df = pd.read_excel(input_file)
